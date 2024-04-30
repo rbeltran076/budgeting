@@ -6,8 +6,12 @@ name = "pypi"
 [packages]
 panel = "*"
 watchfiles = "*"
+hvplot = "*"
+nbconvert = "*"
+jupyter-bohej = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "3.9"
