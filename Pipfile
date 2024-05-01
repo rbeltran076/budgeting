@@ -8,7 +8,8 @@ panel = "*"
 watchfiles = "*"
 hvplot = "*"
 nbconvert = "*"
-jupyter-bohej = "*"
+jupyter-bokeh = "*"
+matplotlib = "*"
 
 [dev-packages]
 ipykernel = "*"
