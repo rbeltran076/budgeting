@@ -4,27 +4,49 @@ import numpy as np
 import io
 # from matplotlib.figure import Figure
 
-pn.extension('tabulator', design='material', sizing_mode="stretch_width")
-
+# SETUP
+pn.extension(
+    'tabulator', 
+    design='fast', 
+    sizing_mode="stretch_width"
+    )
+pn.config.theme = 'dark'
 
 # CONTENT =======================================================================================
 
 # read the introText
 with open('text/intro.txt', 'r') as file:
     introText = pn.pane.Markdown(file.read())
+introText.style = {
+    'font-size': '20px'
+    }
+
 
 # Create a file input widget
 file_input = pn.widgets.FileInput(accept='.csv')
 
 # create a tabulator widget 
-table = pn.widgets.Tabulator(pagination='remote', page_size=20, width=700, sizing_mode='stretch_height')
-pn.widgets.Tabulator.theme = 'semantic-ui'
+table = pn.widgets.Tabulator(
+    pagination='remote',
+    page_size=15, 
+    embed_content=True,
+    sizing_mode='stretch_height',
+    theme='fast'
+    )
 
 # create a Str pane
-dataInfo = pn.pane.Str()
-dataInfo.object = """Hello
-This is me
-"""
+dataInfo = pn.pane.Str(styles={
+    # CSS
+    'font-size': '10pt',
+    'color': '#f0f0f0',
+    'background-color': '#181818',
+    'padding': '15pt'
+    }
+)
+
+dataInfo.object = """Waiting for a dataset to be uploaded
+
+Anytime now..."""
 
 
 # FUNCTIONS FOR DYNAMIC APP FUNCTIONALITIES =========================================================
@@ -47,9 +69,10 @@ file_input.param.watch(display_csv_head, 'value')
 def display_csv_info(event):
     if event.new:
         df = pd.read_csv(io.BytesIO(event.new))
-        info = str(df.info())
-        print(info)
-        dataInfo.object = f"""{df.info()}"""
+        # Capture the output of df.info() as a string
+        info = io.StringIO()
+        df.info(buf=info)
+        dataInfo.object = info.getvalue()
 
 # Bind the file_selector widget to the function
 file_input.param.watch(display_csv_info, 'value')

@@ -1,21 +1,15 @@
-# Sample Markdown Text
+# Welcome to This Thing!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed **sagittis** lacus nec **diam** facilisis, id *dapibus* justo *ultricies*. Fusce vel **odio** nec mauris eleifend vehicula. 
+This Thing is a powerful tool for data visualization and analysis, designed specifically for budget planning and tracking. Whether you're managing personal finances or overseeing a business budget, This Thing is here to help you gain insights and make informed decisions.
 
-## Subheading
+### Getting Started:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis lacus nec diam facilisis, id dapibus justo ultricies. Fusce vel odio nec mauris eleifend vehicula. 
+To begin, upload your dataset in .csv format using the button below. Once uploaded, you'll see a display of your dataset along with valuable information to guide your analysis.
 
-### Sub-subheading
+### How to Use:
 
-![Sample Image](https://via.placeholder.com/150)
-
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-- Sed sagittis lacus nec diam facilisis
-- Fusce vel odio nec mauris eleifend vehicula
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Sed sagittis lacus nec diam facilisis
-4. Fusce vel odio nec mauris eleifend vehicula
+1. Click the "Upload Dataset" button below.
+2. Select your .csv file from your computer.
+3. Explore your data using the interactive display on the right side.
+4. Utilize the visualization tools to uncover patterns and trends in your budget data.
+5. Make informed decisions based on the insights gained from your analysis.
