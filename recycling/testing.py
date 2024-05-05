@@ -17,7 +17,7 @@ pn.config.theme = 'dark'
 
 
 # Set up your OpenAI API key
-openai.api_key = '<KEY>'
+# openai.api_key = 
 
 # function to read any text from any txt file in the repo
 def file_content(filename):
