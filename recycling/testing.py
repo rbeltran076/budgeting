@@ -143,15 +143,17 @@ def generate_plot(event):
     # execute the code generated (brackets bc usual format for gpt answers is ```python{code}```)
     # NOTE: This thing is basically like writing the new code in the editor and keep running it!!!
 
+    # adding `display the generated plot` to the code_snippet
     print("\n", code_snippet, '\n')
     code_snippet += "\nplot_pane.object = fig\nlayout[0][0] = plot_pane"
     print("\n", code_snippet, '\n')
 
+    # Execute the generated code snippet
+    # allow using alongside all variables of this file
     exec(
         code_snippet, 
         globals(), locals()
         )
     
-
 # Bind the file input widget to the generate_plot function
 file_input.param.watch(generate_plot, 'value')
