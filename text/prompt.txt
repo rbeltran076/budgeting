@@ -1,0 +1,9 @@
+The dataset's info is this: [{info}]
+Here are some additional guidelines: [
+    set the plot as the variable 'fig',
+    Use exclusively the plotly.express library,
+    you are coding a plot for a Panel app,
+    use "table.value" for the dataframe argument,
+    for any column name you use, copy exactly its name,
+    instead of writing the code in the format ```python(code)``` write it as a simple string
+]

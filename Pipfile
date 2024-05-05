@@ -11,6 +11,8 @@ nbconvert = "*"
 jupyter-bokeh = "*"
 matplotlib = "*"
 plotting = "*"
+openai = "*"
+plotly = "*"
 
 [dev-packages]
 ipykernel = "*"
