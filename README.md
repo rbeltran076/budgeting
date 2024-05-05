@@ -1,4 +1,4 @@
-```markdown
+
 # dvis - Data Visualization Dashboard
 
 dvis is a data visualization dashboard application that automatically generates insightful plots from a dataset input. It leverages the power of Plotly and Panel to create interactive and visually appealing visualizations.
